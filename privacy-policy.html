@@ -25,10 +25,18 @@
     .updated { color: #8e8e93; font-size: 0.95rem; margin-top: 0; }
     .summary {
       background: #f2f2f7;
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin: 20px 0;
+      color: #1c1c1e;                 /* explicit — don't rely on inheritance */
+     border-left: 4px solid #b45c74; /* subtle brand accent */
+     border-radius: 12px;
+     padding: 16px 18px;
+     margin: 20px 0;
     }
+    @media (prefers-color-scheme: dark) {
+    .summary {
+     background: #1c1c1e;
+     color: #e5e5ea;               /* light text on the dark box */
+   }
+ }
     ul { padding-left: 1.25rem; }
     a { color: #b45c74; }
     footer { margin-top: 3rem; font-size: 0.9rem; color: #8e8e93; }
